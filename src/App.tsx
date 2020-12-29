@@ -7,7 +7,7 @@ import QuestionCard from './components/QuestionCard';
 // Types
 import { QuestionState, Difficulty } from './API';
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -80,7 +80,7 @@ const App = () => {
           Start
         </button>
       )}
-      {!gameOver && <p className='score'>Score:</p>}
+      {!gameOver && <p className='score'>Score: {score}</p>}
       {loading && <p>Loading Questions ...</p>}
       {!loading && !gameOver && (
         <QuestionCard
